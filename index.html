@@ -5,10 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MoneyMaster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://kit.fontawesome.com/4a24423a1c.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <section class="container">
-      <h2>Money Calculator</h2>
+    <section class="container mx-auto">
+      <h2 class="text-4xl text-center my-8">Money Calculator</h2>
+      <div class="flex flex-row justify-evenly gap-4 mx-16">
+        <div>
+          <img class="calculate-image rounded" src="images/money-calculate.jpg" alt="" />
+        </div>
+        <div class="text-center bg-slate-100 rounded p-4">
+          <h2 class="text-3xl my-2 text-center">Income</h2>
+          <p>
+            Income:
+            <input
+              id="input-income"
+              class="border bg-slate-200 rounded my-2 px-2 py-1"
+              type="text"
+              name=""
+              id=""
+            />
+          </p>
+          <p id="error-msg" class="error-msg">
+            <i class="fa-solid fa-xmark"></i> Balance is low
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </p>
+          <h2 class="text-3xl my-2">Expenses</h2>
+          <p>
+            Food:
+            <input
+              id="food-cost"
+              class="border bg-slate-200 rounded my-2 px-2 py-1"
+              type="text"
+              name=""
+              id=""
+            />
+          </p>
+          <p>
+            Rent:
+            <input
+              id="rent-cost"
+              class="border bg-slate-200 rounded my-2 px-2 py-1"
+              type="text"
+              name=""
+              id=""
+            />
+          </p>
+          <p>
+            Clothes:
+            <input
+              id="clothes-cost"
+              class="border bg-slate-200 rounded my-2 px-2 py-1"
+              type="text"
+              name=""
+              id=""
+            />
+          </p>
+          <button
+            onclick="calculateButton()"
+            class="bg-blue-400 py-2 px-8 rounded text-white font-bold my-2"
+          >
+            Calculate
+          </button>
+          <h2 class="text-2xl my-2">Total Expenses: <span id="total-cost">0000</span></h2>
+          <h2 class="text-2xl my-2">Balance: <span id="main-balance">0000</span></h2>
+          <div class="flex justify-center">
+            <p>
+              Save:
+              <input
+                id="save-input"
+                class="border bg-slate-200 rounded my-2 pl-2 py-1"
+                type="text"
+                name=""
+                id=""
+              />
+            </p>
+            <p class="pt-4 px-4">%</p>
+            <button
+              id="save-button"
+              class="bg-blue-400 py-2 px-12 rounded text-white font-bold my-2"
+            >
+              Save
+            </button>
+          </div>
+          <h2 class="text-2xl my-2">Saving Amount: <span id="save-money">0000</span></h2>
+          <h2 class="text-2xl my-2">Remaining Balance: <span id="current-balance">0000</span></h2>
+        </div>
+      </div>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

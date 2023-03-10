@@ -1,0 +1,10 @@
+.calculate-image{
+    height: 620px;
+    width: 550px;
+}
+.fa-xmark, .fa-triangle-exclamation{
+    color: red;
+}
+.error-msg{
+    display: none;
+}
